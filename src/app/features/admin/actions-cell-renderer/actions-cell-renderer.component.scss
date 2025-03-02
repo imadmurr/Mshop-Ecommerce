@@ -1,0 +1,46 @@
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; // Fully rounded edges
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #ff4b5c, #ff6b6b);
+  color: white;
+
+  &:hover {
+    background: linear-gradient(135deg, #ff1e3c, #ff4b5c);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #5a67d8, #7f9cf5); // Blue-Purple gradient
+  color: white;
+  margin-left: 8px;
+
+  &:hover {
+    background: linear-gradient(135deg, #3c49d0, #5a67d8);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

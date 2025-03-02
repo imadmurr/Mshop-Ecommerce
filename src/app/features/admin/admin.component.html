@@ -1,0 +1,40 @@
+<div class="admin-container">
+
+  <div class="grid-section">
+    <div class="grid-card">
+      <h3>Latest Added Products</h3>
+      <ag-grid-angular
+        class="ag-theme-alpine"
+        [theme]="theme"
+        [rowData]="latestProducts"
+        [columnDefs]="columnDefsProducts"
+        [gridOptions]="gridOptions"
+        [domLayout]="'autoHeight'"
+        (gridReady)="onGridReady($event)"
+      ></ag-grid-angular>
+    </div>
+
+    <div class="grid-card">
+      <h3>Latest Orders</h3>
+      <ag-grid-angular
+        class="ag-theme-alpine"
+        [theme]="theme"
+        [rowData]="latestOrders"
+        [columnDefs]="columnDefsOrders"
+        [gridOptions]="gridOptions"
+        [domLayout]="'autoHeight'"
+      ></ag-grid-angular>
+    </div>
+  </div>
+
+  <div class="inventory-section">
+    <h3>Inventory Management</h3>
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      [rowData]="inventoryData"
+      [columnDefs]="columnDefsInventory"
+      [gridOptions]="gridOptions"
+      style="height: 400px; width: 100%;"
+    ></ag-grid-angular>
+  </div>
+</div>
