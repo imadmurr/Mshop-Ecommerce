@@ -43,7 +43,6 @@ export class ActionsCellRendererComponent implements ICellRendererAngularComp {
 
     this.params.api.applyTransaction({ update: [rowData] });
 
-
   }
 
 
