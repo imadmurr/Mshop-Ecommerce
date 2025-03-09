@@ -5,10 +5,11 @@ import {FooterComponent} from './core/footer/footer.component';
 import {NavbarComponent} from './core/navbar/navbar/navbar.component';
 import {AdminComponent} from './features/admin/admin.component';
 import {NgIf} from '@angular/common';
+import {HomeComponent} from './features/home/home.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ ReactiveFormsModule, FooterComponent, NavbarComponent, AdminComponent, NgIf],
+  imports: [ReactiveFormsModule, FooterComponent, NavbarComponent, AdminComponent, NgIf, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -28,7 +28,7 @@ $icon-size: 1.5rem;
     .navbar__shop-name {
       font-size: 1.5rem;
       font-weight: bold;
-      font-family: josefin-semiBold, serif;
+      font-family: 'Acme', sans-serif;
       color: $accent-color;
     }
   }
@@ -42,7 +42,8 @@ $icon-size: 1.5rem;
       a {
         text-decoration: none;
         font-size: 1.2rem;
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
         color: #333;
         transition: color 0.3s;
 

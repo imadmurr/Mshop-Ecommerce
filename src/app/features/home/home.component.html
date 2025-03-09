@@ -1,1 +1,32 @@
-<p>home works!</p>
+
+<div class="home-container">
+  <section class="hero">
+    <h1>New trends 2025</h1>
+    <p>Discover the latest products</p>
+    <button class="cta">Shop Now</button>
+  </section>
+
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of featuredProducts">
+        <img [src]="'https://picsum.photos/200'" [alt]="product.name" />
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price | currency:'USD' }}</p>
+        <span class="new" *ngIf="product.isNew">New</span>
+        <button class>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="offers">
+    <h2>What We Offer</h2>
+    <div class="offer-grid">
+      <div class="offer-card" *ngFor="let offer of offers">
+        <span class="icon">{{ offer.icon }}</span>
+        <h3>{{ offer.title }}</h3>
+        <p>{{ offer.description }}</p>
+      </div>
+    </div>
+  </section>
+</div>
