@@ -1,1 +1,51 @@
-<p>products works!</p>
+<!-- Products Page -->
+<div class="products-page">
+  <!-- Filters Section -->
+  <div class="filters">
+    <!-- Search Bar -->
+    <input type="text" placeholder="Search for products..." [(ngModel)]="searchQuery" (ngModelChange)="filterProducts()" class="search-bar">
+
+    <!-- Category Dropdown -->
+    <select [(ngModel)]="selectedCategory" (change)="filterProducts()" class="filter-dropdown">
+      <option value="">Select Category (All)</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+
+    <!-- Sort Dropdown -->
+    <select [(ngModel)]="sortOption" (change)="filterProducts()" class="filter-dropdown">
+      <option value="nameAsc">Sort by Name (A-Z)</option>
+      <option value="priceAsc">Sort by Price (Low to High)</option>
+      <option value="priceDesc">Sort by Price (High to Low)</option>
+    </select>
+  </div>
+
+  <!-- Products List -->
+  <div class="products-list">
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <!-- Product Image -->
+      <div class="product-image">
+        <img [src]="product.image" alt="Product Image">
+      </div>
+
+      <!-- Product Details -->
+      <div class="product-details">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-price">${{ product.price }}</p>
+        <p class="product-description">{{ product.description }}</p>
+
+        <!-- Rating -->
+        <div class="product-rating">
+          <span *ngFor="let star of getStars(4)" class="star">&#9733;</span>
+        </div>
+      </div>
+
+      <!-- Link to Product Details Page -->
+      <div class="view-details">
+        <a [routerLink]="['/product', product.id]">
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
