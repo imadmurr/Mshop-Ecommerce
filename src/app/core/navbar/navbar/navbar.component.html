@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="navbar__left">
+    <span class="navbar__shop-name">MShop</span>
+  </div>
+
+  <ul class="navbar__menu">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/products">Products</a></li>
+    <li><a routerLink="/about">About Us</a></li>
+  </ul>
+  <div class="navbar__right">
+    <button *ngIf="!isAuthenticated" (click)="signIn()" class="btn-signin">
+      Sign In
+    </button>
+
+    <div class="icon-container">
+      <i class="fas fa-shopping-cart cart-icon"></i>
+    </div>
+
+    <div *ngIf="isAuthenticated" class="icon-container">
+      <i class="fas fa-user user-icon"></i>
+    </div>
+  </div>
+</nav>
