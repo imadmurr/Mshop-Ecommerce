@@ -1,0 +1,72 @@
+.footer {
+  background-color: #E7E4F8;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  text-align: left;
+
+  p {
+    color: #8A8FB9;
+  }
+}
+
+.shop-name {
+  color: black;
+}
+
+.newsletter {
+  margin-top: 10px;
+}
+
+.email-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.subscribe-btn {
+  background-color: #FB2E86;
+  color: white;
+  padding: 8px 12px;
+  margin-left: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-center h3 {
+  color: black;
+  text-align: start;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+  text-align: start;
+  color: #8A8FB9;
+}
+
+.footer-center ul li a {
+  text-decoration: none;
+  color: #8A8FB9;
+  transition: color 0.3s;
+}
+
+.footer-center ul li a:hover {
+  color: #FB2E86;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  color: #8A8FB9;
+  font-size: 14px;
+}
